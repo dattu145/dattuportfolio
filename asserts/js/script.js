@@ -131,7 +131,7 @@ const tabs = document.querySelectorAll('[data-target]'),
       /*===========  Work Popup   ===========*/
 
       document.addEventListener('click', (e) => {
-        if(e.target.parentElement.classList.contains('work__card') || e.target.classList.contains('work__card')){
+        if(e.target.parentElement.classList.contains('work__card')){
             togglePortfolioPopup();
             portfolioItemDetails(e.target.parentElement)
         }

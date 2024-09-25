@@ -329,7 +329,9 @@ transition: .4s;
     display: flex;
     align-items: center;
 }
-
+.info__item a{
+    color: hsl(242,8%, 95%);
+}
 .info__title,
 .info__subtitle{
     font-size: var(--smaller-font-size);

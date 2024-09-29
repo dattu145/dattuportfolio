@@ -18,6 +18,7 @@
     <meta https-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="asserts/css/style.css">
     <link rel="shortcut icon" href="asserts/imgs/favicon.png" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>My Portfolio</title>
 </head>
 <body>
@@ -80,7 +81,7 @@
                     <span class="home__social-follow">Follow Me</span>
                         <div class="home__social-links">
                             <a href="https://github.com/dattu145" target="_blank" class="home__social-link">
-                                <i class="fa-brands fa-square-github"></i>
+                                <i class="fa-brands fa-github"></i>
                             </a>
                             <a href="https://www.instagram.com/jjust.dattu_/" target="_blank" class="home__social-link">
                                 <i class="fa-brands fa-instagram"></i>
@@ -94,7 +95,7 @@
                 <img src="asserts/imgs/home-img-sample.png" class="home__img">
 
                 <div class="home__data">
-                    <h1 class="home__title">Hi, I'm Dattu</h1>
+                    <h1 class="home__title">Hi, I'm <span>Dattu</span></h1>
                     <h3 class="home__subtitle"></h3>
                     <p class="home__description">Passionate about web design, ML, and data science, with a focus on excellence and growth.</p>
                     <a href="#about" class="button"><i class="fa-solid fa-user button__icon"></i>
@@ -140,7 +141,7 @@
         <!--#####  About  ####-->
 
         <section class="about section" id="about">
-            <h2 data-heading="My Intro" class="section__title">About Me</h2>
+            <h2 data-heading="My Intro" class="section__title" data-aos="fade-down" data-aos-offset="200">About Me</h2>
         
             <div class="about__container container grid">
                 <video src="asserts/imgs/video_cutted.mp4" autoplay muted playsinline loop alt="" class="about__img"></video>
@@ -177,11 +178,11 @@
         <!--#####  Qualification  ####-->
 
         <section class="qualification section">
-            <h2 data-heading="My Journey" class="section__title">Qualifications</h2>
+            <h2 data-heading="My Journey" class="section__title" data-aos="fade-down" data-aos-offset="200">Qualifications</h2>
 
             <div class="qualification__container container grid">
                 
-                <div class="education">
+                <div class="education" data-aos="fade-right" data-aos-offset="200" data-aos-duration="900">
                     <h3 class="qualification__title">
                         <i class="fa-solid fa-graduation-cap"></i> Education
                     </h3>
@@ -214,7 +215,7 @@
                     </div>
                 </div>
 
-                <div class="experience">
+                <div class="experience" data-aos="fade-left" data-aos-offset="200" data-aos-duration="900">
                     <h3 class="qualification__title">
                         <i class="fa-solid fa-briefcase"></i> Experience
                     </h3>
@@ -252,7 +253,7 @@
         <!--#####  Skills  ####-->
 
         <section class="skills section" id="skills">
-            <h2 data-heading="My Abilities" class="section__title">My Experience</h2>
+            <h2 data-heading="My Abilities" class="section__title" data-aos="fade-down" data-aos-offset="200">My Experience</h2>
             
             <div class="skills__container container grid">
                 
@@ -473,8 +474,8 @@
          
         <!--#####  Work  ####-->
 
-                <section class="work section" id="work">
-            <h2 data-heading="My Portfolio" class="section__title">Recent Works</h2>
+        <section class="work section" id="work">
+            <h2 data-heading="My Portfolio" class="section__title" data-aos="fade-down" data-aos-offset="100">Recent Works</h2>
 
             <div class="work__filters">
                 <span class="work__item active__work" data-filter="all">All</span>
@@ -569,7 +570,7 @@
 
 
         <section class="certs section" id="certs">
-            <h2 data-heading="Check out" class="section__title">My Certificates</h2>
+            <h2 data-heading="Check out" class="section__title" data-aos="fade-down" data-aos-offset="200">My Certificates</h2>
             <div class="certs__outer">
                 <div class="certs__main">
                     <div class="certs__nav">
@@ -748,7 +749,7 @@
         <!--#####  Contact  ####-->
 
         <section class="contact section" id="contact">
-            <h2 data-heading="Get in touch" class="section__title">Contact Me</h2>
+            <h2 data-heading="Get in touch" class="section__title" data-aos="fade-down" data-aos-offset="200">Contact Me</h2>
 
             <div class="contact__container container grid">
                 <div class="contact__content">
@@ -858,7 +859,8 @@
     <!--####   Typejs    ####-->
     <script src="https://unpkg.com/typeit@8.8.4/dist/index.umd.js"></script>
 
-    
+    <!--####    AOS   ####-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <script>
 new TypeIt(".home__subtitle", {
@@ -885,6 +887,7 @@ new TypeIt(".home__subtitle", {
 .pause(400)
 .go();
 
+AOS.init();
 </script>    
 
 </body>

@@ -50,10 +50,10 @@
     }
 }
 @font-face {
-    font-family: 'insomnia'; /* Name for your font */
-    src: url('../fonts/Insomnia.ttf') format('truetype'); /* Path to your TTF file */
-    font-weight: normal; /* Normal weight */
-    font-style: normal; /* Normal style */
+    font-family: 'insomnia';
+    src: url('../fonts/Insomnia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 *{
     margin: 0;

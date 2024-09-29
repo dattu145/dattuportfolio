@@ -3,7 +3,7 @@
 /* ========== VARIABLES CSS ========== */
 :root{
     --hue-color: 242;
-    --skin-color : hsl(342, 92%,46%);
+    --skin-color : hsl(342, 92%, 46%);
     --title-color: hsl(var(--hue-color),8%, 95%);
     --text-color: hsl(var(--hue-color),8%, 85%);
     --body-color: hsl(var(--hue-color),19%, 5%);
@@ -48,6 +48,12 @@
         --small-font-size: .813rem;
         --smaller-font-size: .75rem;
     }
+}
+@font-face {
+    font-family: 'insomnia'; /* Name for your font */
+    src: url('../fonts/Insomnia.ttf') format('truetype'); /* Path to your TTF file */
+    font-weight: normal; /* Normal weight */
+    font-style: normal; /* Normal style */
 }
 *{
     margin: 0;
@@ -109,6 +115,7 @@ input{
 
 .section{
     padding: 6rem 0.2rem;
+    overflow-x: hidden;
 }
 .section__title{
     text-align: center;
@@ -300,8 +307,14 @@ transition: .4s;
 .home__img{
     display: none;
 }
-.home__title{
+
+.home__title {
     font-size: var(--biggest-font-size);
+}
+.home__title span{
+    font-family: "insomnia",Poppins;
+    font-size: clamp(1rem,4rem,10vw);
+    margin-left: .5rem;
 }
 .home__subtitle{
     font-size: var(--h3-font-size);
@@ -332,6 +345,7 @@ transition: .4s;
 .info__item a{
     color: hsl(242,8%, 95%);
 }
+
 .info__title,
 .info__subtitle{
     font-size: var(--smaller-font-size);
@@ -871,7 +885,7 @@ border-radius: .25rem;
     width: 100%;
     height: 100%;
     z-index: 1000;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1357,10 +1371,14 @@ textarea.input{
 
 @media screen and (max-width: 768px){
     .about__img{
-        width: 250px;
+        max-width: 250px;
+        width: 100%;
     }
     .home__description{
         max-width: 350px;
+        font-size: var(--small-font-size);
+    }
+    .about__description{
         font-size: var(--small-font-size);
     }
     .web__certs{
@@ -1633,6 +1651,9 @@ textarea.input{
     .cert__close{
         right: .5rem;
         top: .5rem;
+    }
+    .about__info{
+        grid-template-columns: 190px;
     }
 }
 @media screen and (max-width : 250px){

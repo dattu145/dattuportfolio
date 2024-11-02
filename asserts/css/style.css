@@ -49,6 +49,12 @@
         --smaller-font-size: .75rem;
     }
 }
+@font-face {
+    font-family: 'insomnia'; /* Name for your font */
+    src: url('../fonts/Insomnia.ttf') format('truetype'); /* Path to your TTF file */
+    font-weight: normal; /* Normal weight */
+    font-style: normal; /* Normal style */
+}
 *{
     margin: 0;
     padding: 0;
@@ -523,7 +529,7 @@ transition: .4s;
 }
 
 .skills__title{
-    font-size: var(--h3-font-size);
+    font-size: medium;
     font-weight: var(--font-medium);
 }
 .skills__subtitle{
@@ -757,6 +763,9 @@ border-radius: .25rem;
 .cert__title{
     margin-left: var(--mb-0-75);
 }
+.cert__title i{
+    margin-right: .4rem;
+}
 .certs__nav{
     max-width: 300px;
     width: 100%;
@@ -806,6 +815,10 @@ border-radius: .25rem;
     color: var(--skin-color);
     margin: 2rem;
 }
+.container__title span{
+    font-size: .8rem;
+    font-weight: 500;
+}
 .web__certs{
     display: grid;
     grid-template-columns: repeat(4,200px);
@@ -827,26 +840,29 @@ border-radius: .25rem;
     font-size: .8rem;
 }
 .cert::after{
-    content: "View";
+    font-family: "Font Awesome 5 Free";
+    content: "\f06e";
     position: absolute;
     width: 100%;
     height: 100%;
     top : 0;
     left: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
+    font-weight: 900;
     transition: .2s;
     opacity: 0;
+    font-size: 1rem;
 }
 .cert__credentials{
     display: none;
 }
 .cert:hover.cert::after{
     opacity: 1;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(1px);
 }
 .add__cert{
     display: flex;
@@ -887,7 +903,7 @@ border-radius: .25rem;
     position: relative;
     display: flex;
     flex-basis: 80%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.95);
     border-radius: 10px;
     justify-content: center;
     align-items: center;
@@ -924,7 +940,7 @@ border-radius: .25rem;
     right: 1.5rem;
     font-size: var(--h2-font-size);
     color: var(--skin-color);
-    background: rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.05);
     padding: .2rem;
     width: 25px;
     height: 25px;
